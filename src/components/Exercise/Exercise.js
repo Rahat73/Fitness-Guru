@@ -1,8 +1,7 @@
 import React from 'react';
 
-const Exercise = ({ exercise }) => {
+const Exercise = ({ exercise, handleAddToList }) => {
     const { picture, name, age, about, time } = exercise;
-    console.log(picture)
 
     let slicedTxt;
     if (about.length > 100) {
@@ -20,7 +19,7 @@ const Exercise = ({ exercise }) => {
                 <p className="font-semibold mx-3">For Age: {age}</p>
                 <p className="font-semibold mx-3">Time required: {time}</p>
                 <div className='text-center py-5'>
-                    <button className="bg-cyan-400 px-16 py-2 hover:bg-blue-400">Add to List</button>
+                    <button onClick={() => handleAddToList(exercise)} className="bg-cyan-400 px-16 py-2 hover:bg-blue-400">Add to List</button>
                 </div>
             </div>
         </div>
