@@ -1,20 +1,31 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Exercise from '../Exercise/Exercise';
 import Header from '../Header/Header';
 import profile from '../../images/DSC_0061 (1) (1).jpg'
 
 const Gym = () => {
+
+    const [exercises, setExercises] = useState([]);
+    //const [calculation, setCalculation] = useState([]);
+
+    useEffect(() => {
+        fetch('data.json')
+            .then(res => res.json())
+            .then(data => setExercises(data))
+    }, []);
+
     return (
         <div>
             <div className='grid grid-cols-12'>
                 <div className='col-span-9 w-11/12 mx-auto'>
                     <Header></Header>
                     <div className='grid grid-cols-3 gap-4'>
-                        <Exercise></Exercise>
-                        <Exercise></Exercise>
-                        <Exercise></Exercise>
-                        <Exercise></Exercise>
-                        <Exercise></Exercise>
+                        {
+                            exercises.map(exercise => <Exercise
+                                key={exercise.id}
+                                exercise={exercise}
+                            ></Exercise>)
+                        }
                     </div>
                 </div>
                 <div className='col-span-3 bg-gray-50'>
