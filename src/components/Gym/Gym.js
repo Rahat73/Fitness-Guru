@@ -7,6 +7,7 @@ const Gym = () => {
 
     const [exercises, setExercises] = useState([]);
     const [calculation, setCalculation] = useState([]);
+    const [breakTime, setBreak] = useState([0])
 
     useEffect(() => {
         fetch('data.json')
@@ -19,7 +20,9 @@ const Gym = () => {
         setCalculation(newCalculation);
     }
 
-
+    const handleBreak = (value) => {
+        setBreak(value);
+    }
 
     return (
         <div>
@@ -37,7 +40,11 @@ const Gym = () => {
                     </div>
                 </div>
                 <div className='col-span-3 bg-gray-50'>
-                    <Calculations calculation={calculation}></Calculations>
+                    <Calculations
+                        calculation={calculation}
+                        breakTime={breakTime}
+                        handleBreak={handleBreak}
+                    ></Calculations>
                 </div>
             </div>
         </div >

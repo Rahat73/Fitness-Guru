@@ -1,9 +1,10 @@
-import React from 'react';
+
 import profile from '../../images/DSC_0061 (1) (1).jpg'
 
-const Calculations = ({ calculation }) => {
+const Calculations = ({ calculation, breakTime, handleBreak }) => {
 
     let totalTime = 0;
+
 
     for (const exercise of calculation) {
         totalTime += exercise.time;
@@ -37,11 +38,11 @@ const Calculations = ({ calculation }) => {
                 </div>
                 <h1 className='text-2xl'>Add A Break</h1>
                 <div className='bg bg-sky-200 flex justify-evenly py-3 my-5 rounded-lg'>
-                    <div className='bg-slate-50 rounded-full p-3'>10</div>
-                    <div className='bg-slate-50 rounded-full p-3'>20</div>
-                    <div className='bg-slate-50 rounded-full p-3'>30</div>
-                    <div className='bg-slate-50 rounded-full p-3'>40</div>
-                    <div className='bg-slate-50 rounded-full p-3'>50</div>
+                    <button onClick={() => handleBreak(10)} className='bg-slate-50 rounded-full p-3'>10</button>
+                    <button onClick={() => handleBreak(20)} className='bg-slate-50 rounded-full p-3'>20</button>
+                    <button onClick={() => handleBreak(30)} className='bg-slate-50 rounded-full p-3'>30</button>
+                    <button onClick={() => handleBreak(40)} className='bg-slate-50 rounded-full p-3'>40</button>
+                    <button onClick={() => handleBreak(50)} className='bg-slate-50 rounded-full p-3'>50</button>
                 </div>
                 <h1 className='text-2xl '>Exercise Details</h1>
                 <div className='bg bg-sky-200 flex items-center px-3 py-3 my-5 rounded-lg'>
@@ -50,7 +51,7 @@ const Calculations = ({ calculation }) => {
                 </div>
                 <div className='bg bg-sky-200 flex items-center px-3 py-3 my-5 rounded-lg'>
                     <h1 className='font-semibold pr-5 text-xl'>Break Time:</h1>
-                    <p className='font-semibold text-slate-500'>20 <span>seconds</span></p>
+                    <p className='font-semibold text-slate-500'>{breakTime} <span>seconds</span></p>
                 </div>
             </div>
         </div>
