@@ -1,6 +1,9 @@
 
 import profile from '../../images/DSC_0061 (1) (1).jpg'
 
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 const Calculations = ({ calculation, breakTime, handleBreak }) => {
 
     let totalTime = 0;
@@ -15,6 +18,8 @@ const Calculations = ({ calculation, breakTime, handleBreak }) => {
     for (const exercise of calculation) {
         totalTime += exercise.time;
     }
+
+    const showToast = () => toast("You have completed your activity!");
 
     return (
         <div>
@@ -60,7 +65,8 @@ const Calculations = ({ calculation, breakTime, handleBreak }) => {
                     <p className='font-semibold text-slate-500'>{breakTime} <span>seconds</span></p>
                 </div>
                 <div className='flex justify-center'>
-                    <button className='bg-blue-300 px-12 py-3 rounded-lg font-semibold my-7 hover:bg-blue-500 hover:text-white'>Activity Completed</button>
+                    <button onClick={showToast} className='bg-blue-300 px-12 py-3 rounded-lg font-semibold my-7 hover:bg-blue-500 hover:text-white'>Activity Completed</button>
+                    <ToastContainer />
                 </div>
             </div>
         </div>
