@@ -5,7 +5,7 @@
         "name": "Plunk",
         "about": "Nostrud dolore aliquip qui enim et cillum esse consectetur commodo ut ullamco proident veniam. Excepteur aliqua eu reprehenderit mollit reprehenderit cillum consectetur qui. Consectetur adipisicing magna aute eiusmod excepteur labore adipisicing ad consectetur amet. Ad et quis pariatur elit sit deserunt cupidatat ipsum in veniam elit.\r\n",
         "age": 33,
-        "time": 41.4498
+        "time": 100
     },
     {
         "id": "6334607405c8f040d5781963",
@@ -13,15 +13,15 @@
         "name": "Push-Up",
         "about": "Ut excepteur in minim sint irure ut. Tempor nisi enim nisi nisi enim ad. Commodo amet ad dolore laborum officia Lorem aliqua occaecat pariatur mollit adipisicing laborum sit. Et non occaecat ipsum nisi.\r\n",
         "age": 33,
-        "time": 92.2118
+        "time": 50
     },
     {
         "id": "63346074e56d5308b62d8632",
-        "picture": "https://i.ibb.co/hRB26Dh/download.jpg",
+        "picture": "https://i.ibb.co/ss5sJVf/1109-Man-Woman-Dumbbell-Workout-Getty-Images-668764717.webp",
         "name": "Dumbell",
         "about": "Duis deserunt laborum anim amet incididunt. Laboris magna ad ex tempor. Cupidatat eu nulla sint consequat adipisicing minim enim eu ex aliqua. Sit culpa sit velit ut ex ipsum enim ipsum laborum. Non mollit elit elit et proident nulla velit. Amet esse anim reprehenderit eiusmod ipsum eu occaecat in mollit ipsum enim sit amet.\r\n",
         "age": 31,
-        "time": 69.3862
+        "time": 120
     },
     {
         "id": "633460743cb2d1fe91aba429",
@@ -29,7 +29,7 @@
         "name": "Lunges",
         "about": "Minim occaecat id in reprehenderit. Proident magna exercitation non fugiat reprehenderit. Reprehenderit irure do dolore ullamco eiusmod. Aliquip non consequat qui mollit excepteur laborum magna ipsum minim velit elit non voluptate esse. Nisi deserunt Lorem quis sit nisi.\r\n",
         "age": 27,
-        "time": 76.9575
+        "time": 60
     },
     {
         "id": "633460744a9f732bca837646",
@@ -37,7 +37,7 @@
         "name": "Squats",
         "about": "Deserunt nostrud ex minim ullamco laborum adipisicing proident eiusmod quis proident ad labore. Ullamco est incididunt velit aute sit nulla sit labore dolor Lorem velit exercitation occaecat aliqua. Ipsum laborum do laborum elit tempor exercitation do consequat excepteur officia officia proident fugiat. Dolor nulla non Lorem in ea eu et elit laboris mollit eiusmod veniam. Reprehenderit exercitation officia consectetur velit.\r\n",
         "age": 40,
-        "time": 97.9965
+        "time": 60
     },
     {
         "id": "63346074476543662097a8b8",
@@ -45,6 +45,6 @@
         "name": "Burpees",
         "about": "Et excepteur reprehenderit aliquip exercitation adipisicing reprehenderit culpa et nostrud magna cupidatat cupidatat pariatur. Anim labore aute irure consequat eu do incididunt reprehenderit minim duis in et fugiat. Officia ad velit consectetur adipisicing cupidatat ut in occaecat ex ut in reprehenderit minim.\r\n",
         "age": 26,
-        "time": 90.7972
+        "time": 90
     }
 ]

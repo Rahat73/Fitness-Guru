@@ -13,7 +13,7 @@ const Exercise = ({ exercise, handleAddToList }) => {
     return (
         <div>
             <div className='bg-gray-50'>
-                <img className='object-cover h-64' src={picture} alt="fitness" />
+                <img className='lg:object-cover lg:h-64' src={picture} alt="fitness" />
                 <h1 className="text-2xl font-semibold mt-2 mx-3">{name}</h1>
                 <p className=" text-slate-600 mx-3 my-2">{slicedTxt}</p>
                 <p className="font-semibold mx-3">For Age: {age}</p>

@@ -6,6 +6,12 @@ const Calculations = ({ calculation, breakTime, handleBreak }) => {
     let totalTime = 0;
 
 
+    if (!localStorage.getItem("breakTime")) {
+        breakTime = 0;
+    }
+    else
+        breakTime = localStorage.getItem("breakTime");
+
     for (const exercise of calculation) {
         totalTime += exercise.time;
     }
@@ -24,25 +30,25 @@ const Calculations = ({ calculation, breakTime, handleBreak }) => {
                 </div>
                 <div className='bg bg-sky-200 flex justify-evenly rounded-lg my-5 py-3'>
                     <div>
-                        <h1 className='font-bold text-2xl'>75<span className='font font-normal text-sm'>kg</span></h1>
+                        <h1 className='font-bold text-2xl'>65<span className='font font-normal text-sm'>kg</span></h1>
                         <p>Weight</p>
                     </div>
                     <div>
-                        <h1 className='font-bold text-2xl'>6.5</h1>
+                        <h1 className='font-bold text-2xl'>5.4</h1>
                         <p>Height</p>
                     </div>
                     <div>
-                        <h1 className='font-bold text-2xl'>25<span className='font font-normal text-sm'>yrs</span></h1>
+                        <h1 className='font-bold text-2xl'>24<span className='font font-normal text-sm'>yrs</span></h1>
                         <p>Age</p>
                     </div>
                 </div>
                 <h1 className='text-2xl'>Add A Break</h1>
                 <div className='bg bg-sky-200 flex justify-evenly py-3 my-5 rounded-lg'>
-                    <button onClick={() => handleBreak(10)} className='bg-slate-50 rounded-full p-3'>10</button>
-                    <button onClick={() => handleBreak(20)} className='bg-slate-50 rounded-full p-3'>20</button>
-                    <button onClick={() => handleBreak(30)} className='bg-slate-50 rounded-full p-3'>30</button>
-                    <button onClick={() => handleBreak(40)} className='bg-slate-50 rounded-full p-3'>40</button>
-                    <button onClick={() => handleBreak(50)} className='bg-slate-50 rounded-full p-3'>50</button>
+                    <button onClick={() => handleBreak(10)} className='bg-slate-50 rounded-full p-3 hover:bg-blue-300'>10</button>
+                    <button onClick={() => handleBreak(20)} className='bg-slate-50 rounded-full p-3 hover:bg-blue-300'>20</button>
+                    <button onClick={() => handleBreak(30)} className='bg-slate-50 rounded-full p-3 hover:bg-blue-300'>30</button>
+                    <button onClick={() => handleBreak(40)} className='bg-slate-50 rounded-full p-3 hover:bg-blue-300'>40</button>
+                    <button onClick={() => handleBreak(50)} className='bg-slate-50 rounded-full p-3 hover:bg-blue-300'>50</button>
                 </div>
                 <h1 className='text-2xl '>Exercise Details</h1>
                 <div className='bg bg-sky-200 flex items-center px-3 py-3 my-5 rounded-lg'>
@@ -52,6 +58,9 @@ const Calculations = ({ calculation, breakTime, handleBreak }) => {
                 <div className='bg bg-sky-200 flex items-center px-3 py-3 my-5 rounded-lg'>
                     <h1 className='font-semibold pr-5 text-xl'>Break Time:</h1>
                     <p className='font-semibold text-slate-500'>{breakTime} <span>seconds</span></p>
+                </div>
+                <div className='flex justify-center'>
+                    <button className='bg-blue-300 px-12 py-3 rounded-lg font-semibold my-7 hover:bg-blue-500 hover:text-white'>Activity Completed</button>
                 </div>
             </div>
         </div>

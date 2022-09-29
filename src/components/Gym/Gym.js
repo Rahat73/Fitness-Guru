@@ -21,15 +21,23 @@ const Gym = () => {
     }
 
     const handleBreak = (value) => {
+        localStorage.setItem('breakTime', value)
         setBreak(value);
     }
 
     return (
         <div>
-            <div className='grid grid-cols-12'>
+            <div className='grid grid-cols-9 lg:grid-cols-12'>
                 <div className='col-span-9 w-11/12 mx-auto'>
                     <Header></Header>
-                    <div className='grid grid-cols-3 gap-4'>
+                    <div className='block lg:hidden bg-gray-50 py-1 mb-10'>
+                        <Calculations
+                            calculation={calculation}
+                            breakTime={breakTime}
+                            handleBreak={handleBreak}
+                        ></Calculations>
+                    </div>
+                    <div className='grid grid-cols-1 gap-4 lg:grid-cols-3'>
                         {
                             exercises.map(exercise => <Exercise
                                 key={exercise.id}
@@ -39,7 +47,7 @@ const Gym = () => {
                         }
                     </div>
                 </div>
-                <div className='col-span-3 bg-gray-50'>
+                <div className='col-span-3 bg-gray-50 hidden lg:block'>
                     <Calculations
                         calculation={calculation}
                         breakTime={breakTime}
